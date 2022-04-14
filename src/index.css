@@ -1,16 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-html {
+* {
   box-sizing: border-box;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
-*,
+html {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+  "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial,
+  sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration-skip-ink: "auto";
+}
+
+/**,
 *:after,
 *::before {
   box-sizing: inherit;
-}
+}*/
 
 
 * {

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
 
-import store from './_store'
+import store from './redux/_store'
 import './index.css'
 import Table from './commons/components/UI/Table'
 // import Moment from 'react-moment'
@@ -156,8 +156,8 @@ root.render(
         label={'Lista de Usuarios'}
         index={1}
       />*/}
-      <CalendarSingle/>
-      <CalendarRange/>
+      {/*<CalendarSingle/>
+      <CalendarRange/>*/}
       {/*<Login/>*/}
       <Register/>
     </Provider>

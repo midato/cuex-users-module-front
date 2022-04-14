@@ -2,7 +2,13 @@ import {
   CHECK_IF_USER_IS_LOGGED_IN,
   GET_ALL_USERS_BY_ROLE_ERROR,
   GET_ALL_USERS_BY_ROLE_INIT,
-  GET_ALL_USERS_BY_ROLE_SUCCESS
+  GET_ALL_USERS_BY_ROLE_SUCCESS,
+  GET_ALL_ENTITIES_INIT,
+  GET_ALL_ENTITIES_SUCCESS,
+  GET_ALL_ENTITIES_ERROR,
+  GET_API_TOKEN_INIT,
+  GET_API_TOKEN_SUCCESS,
+  GET_API_TOKEN_ERROR,
 } from '../actions/user.action'
 
 export const initialState = {
@@ -10,14 +16,14 @@ export const initialState = {
   loading: false,
   role: null,
   user: {},
-  users: []
+  users: [],
+  entities: []
 }
 
 export default (state = initialState, action) => {
-  console.log(action)
+  // console.log(action)
   switch (action.type) {
     case CHECK_IF_USER_IS_LOGGED_IN:
-      console.log(state)
       return {
         ...state,
         dataLoaded: true,
@@ -31,8 +37,19 @@ export default (state = initialState, action) => {
       return { ...state, users: [...action.users], loading: false }
     case GET_ALL_USERS_BY_ROLE_ERROR:
       return { ...state, loading: false, error: action.error }
+    case GET_ALL_ENTITIES_INIT:
+      return { ...state, loading: true, entities: [] }
+    case GET_ALL_ENTITIES_SUCCESS:
+      return { ...state, entities: [...action.entities], loading: false }
+    case GET_ALL_ENTITIES_ERROR:
+      return { ...state, loading: false, error: action.error }
+    case GET_API_TOKEN_INIT:
+      return { ...state, loading: true, data: [] }
+    case GET_API_TOKEN_SUCCESS:
+      return { ...state, data: {...action.data}, loading: false }
+    case GET_API_TOKEN_ERROR:
+      return { ...state, loading: false, error: action.error }
     default:
-      console.log(state)
       return state
   }
 }
