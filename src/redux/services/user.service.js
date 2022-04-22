@@ -1,12 +1,10 @@
 import axios from 'axios'
 import config from '../../config'
 import axiosClient from '../../commons/network/apiClient'
-import { GEO } from '../../commons/constants'
 
 export function fetchUsersByRole(role) {
   return axios.get(`${config.BASE_URL}/user/role/${role}`)
 }
-
 
 export const fetchAllEntities = async (method, url) => {
   const encryptKeys = null
