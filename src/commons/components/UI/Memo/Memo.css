@@ -1,0 +1,46 @@
+.ql-container {
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  background: #fefcfc;
+}
+
+/* Snow Theme */
+.ql-snow.ql-toolbar {
+  display: block;
+  background: #eaecec;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+/* Bubble Theme */
+.ql-bubble .ql-editor {
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+}
+
+.ql-editor {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  min-height: 18em;
+  height: 150px;
+  white-space: normal;
+  background: #ffffff;
+}
+
+.themeSwitcher {
+  margin-top: 0.5em;
+  font-size: small;
+}
+
+/*CUSTOM PLACEHOLDER */
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  font-style: normal;
+}
+
+/*ICON BAR BACKGROUND*/
+.ql-snow.ql-toolbar {
+  display: block;
+  background: #ffffff;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
